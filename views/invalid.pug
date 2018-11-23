@@ -1,0 +1,8 @@
+extends layout
+
+block content
+ script(type='text/javascript').
+                 JSAlert.alert("Invalid file type. Only JPG, PNG or GIF file are allowed.", null, JSAlert.Icons.Failed).then(function() {
+                    window.location.href = "/upload"
+                });
+                 

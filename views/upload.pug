@@ -1,0 +1,58 @@
+extends layout
+
+block content
+
+ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  a.navbar-brand(href='#') LewdBox
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarColor01', aria-controls='navbarColor01', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarColor01.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        a.nav-link(href='/') Home 
+      li.nav-item
+        a.nav-link(href='#') New Posts
+      li.nav-item.active
+        a.nav-link(href='/upload') 
+        |Upload
+        span.sr-only (current)
+    .container
+    .row
+     
+ form(action='/upload' method="POST" enctype="multipart/form-data" class="dropzone dz-clickable")
+      .row
+        .col.s12
+          if msg ==1
+            .success
+              | Photo uploaded successfully
+          else if msg == 2
+            .error
+              | File size too large
+          else if msg == 3
+            .error
+              | Invalid file type. Only JPG, PNG or GIF file are allowed.      
+      .row
+        .col.s12 
+          .file-field.input-field
+            .btn.grey
+              span File
+                input(type="file" name="file")
+            .file-path-wrapper
+              input.file-path.validate(type='text' )
+      .row
+       .input-field.col.s12
+        input#caption.validate(type='text' name="caption" value="anonymous" readonly)
+        label(for='caption') Username 
+      .row
+       .input-field.col.s12
+         select(name='tags')
+            option(value='Trap') Trap
+            option(value='Gore') Gore
+            option(value='Hentai') Hentai
+            option(value='BBW') BBW        
+      
+      .row
+        .col.s12 
+          button.btn.waves-effect.waves-light(type='submit', name='action' hidden)
+            | Upload
+            i.material-icons.right 

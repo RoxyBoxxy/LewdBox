@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+    span
+      | Hello <%= loginData.name %> ! Complete your profile
+    input(type='hidden', name='name', value='<%=', logindata.name='', %='')
+    |  id ="name">
+    input(type='hidden', name='pass', value='<%=', logindata.pass='', %='')
+    |  id = "pass">
+    p
+      label.w3-text-blue
+        b Email
+      input#email.w3-input.w3-border(name='email', type='text')
+    p
+      label#pass.w3-text-blue
+        b Mobile Number
+      input#phone.w3-input.w3-border(name='phone', type='text')
+    p
+    p
+      label#pass.w3-text-blue
+        b Education
+      input#education.w3-input.w3-border(name='education', type='text')
+    p
+      label#pass.w3-text-blue
+        b Area of Intrest
+      input#aoi.w3-input.w3-border(name='aoi', type='text')
+    p
+      button#saveBtn.w3-btn.w3-blue Save

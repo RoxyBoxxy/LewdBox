@@ -1,0 +1,210 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+body {
+    color: #f9f9f9;
+    background-color: #1e2225;
+}
+/* ---- base ---- */
+
+html,body{ 
+	width:100%;
+	height:100%;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #353535;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+    position: fixed;
+    width: 100%;
+    z-index: 7;
+    background-color: #2d2d2d!important;
+}
+input.form-control.mr-sm-2 {
+    background: #353535;
+    border: 1px solid #17a2b8;
+}
+
+
+canvas.particles-js-canvas-el {
+    position: fixed;
+    z-index: 0;
+}
+div#content {
+    background: #5858588c;
+    width: 73%;
+    z-index: 5;
+    height: 84%;
+    position: fixed;
+    left: 13%;
+    top: 11%;
+    border-radius: 21px;
+}
+div#fpscontanor {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-size: 25px
+}
+
+
+.row {
+    padding-top: 54px;
+}
+a {
+  color: #00B7FF;
+}
+
+nav form {
+    height: 100%;
+    position: fixed;
+    top: 8%;
+    left: 22%;
+}
+img.responsive-img {
+    height: 200px;
+    width: 200px;
+}
+h2.w3-text-blue {
+    float: left;
+    width: 45%;
+    padding-left: 112px;
+    padding-top: 165px;
+}
+img {
+  max-width: 100%;
+}
+
+// Simple Lightbox
+
+.lightbox-opened {
+  background-color: #333;
+  background-color: rgba(#333, 0.9);
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  overflow-y: scroll;
+  padding: 24px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  
+  &:before {
+    background-color: #333;
+    background-color: rgba(#333, 0.9);
+    color: #eee;
+    content: "x";
+    font-family: sans-serif;
+    padding: 6px 12px;
+    position: fixed;
+    text-transform: uppercase;
+  }
+  
+  img {
+    box-shadow: 0 0 6px 3px #333;
+  }
+}
+
+// No Background Scroll
+
+.no-scroll {
+  overflow: hidden;
+}
+form {
+    margin: 0 auto;
+    width: 54%;
+    height: 38%;
+}
+img.responsive-img, video.responsive-video {
+    max-width: 100%;
+    height: 182px;
+}
+.file-field.input-field {
+    visibility: hidden;
+}
+button.btn.waves-effect.waves-light {
+    position: relative;
+    bottom: 447%;
+    float: right;
+}
